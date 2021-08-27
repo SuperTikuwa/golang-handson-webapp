@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #0099ff;
+  color: #fff;
+}
+
+.task-register-form {
+  padding-left: 40px;
+
+  .task-register-form-input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    input {
+      height: 40px;
+      width: 200px;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .submit-button {
+      background-color: #0099ff;
+      width: 100px;
+      color: #fff;
+      border-width: 0;
+      &:hover {
+        background: #11aaff;
+      }
+      &:active {
+        background: #0077dd;
+      }
+    }
+  }
+}
+
+hr {
+  margin: 10px;
+}
+
+.card {
+  padding: 10px;
+  margin: 10px 50px;
+  border: 2px solid #999;
+  border-radius: 10px;
+
+  h5 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-body {
+    display: flex;
+
+    .card-text {
+      flex-wrap: wrap;
+      width: 90%;
+    }
+
+    .done-button {
+      align-self: flex-end;
+      margin-left: auto;
+      background-color: #00dd33;
+      color: #555;
+      border-width: 0;
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 18px;
+
+      &:hover {
+        background: #88ff88;
+      }
+      &:active {
+        background: #00bb33;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding-left: 20px;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #0099ff;
+  color: #fff;
+}
+
+.task-register-form {
+  padding-left: 40px;
+}
+
+.task-register-form .task-register-form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.task-register-form .task-register-form-input input {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.task-register-form .task-register-form-input .submit-button {
+  background-color: #0099ff;
+  width: 100px;
+  color: #fff;
+  border-width: 0;
+}
+
+.task-register-form .task-register-form-input .submit-button:hover {
+  background: #11aaff;
+}
+
+.task-register-form .task-register-form-input .submit-button:active {
+  background: #0077dd;
+}
+
+hr {
+  margin: 10px;
+}
+
+.card {
+  padding: 10px;
+  margin: 10px 50px;
+  border: 2px solid #999;
+  border-radius: 10px;
+}
+
+.card h5 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.card .card-title {
+  font-size: 20px;
+}
+
+.card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .card-body .card-text {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+}
+
+.card .card-body .done-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: auto;
+  background-color: #00dd33;
+  color: #555;
+  border-width: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.card .card-body .done-button:hover {
+  background: #88ff88;
+}
+
+.card .card-body .done-button:active {
+  background: #00bb33;
+}
+/*# sourceMappingURL=App.css.map */

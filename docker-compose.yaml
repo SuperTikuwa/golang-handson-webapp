@@ -1,0 +1,11 @@
+version: "3"
+services:
+  todo_database:
+    container_name: todo_database
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: todo_db
+    ports:
+      - 127.0.0.1:33063:3306
+    tty: true
