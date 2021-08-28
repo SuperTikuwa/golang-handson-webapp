@@ -1,0 +1,86 @@
+swagger: "2.0"
+info:
+  description: "Golangハンズオン勉強会webアプリ編"
+  version: "1.0.0"
+  title: "Golang-Handson-Webapp"
+host: "localhost:8080"
+tags:
+  - name: "task"
+    description: "タスク関係API"
+schemes:
+  - "http"
+paths:
+  /task:
+    post:
+      tags:
+        - "task"
+      summary: "タスク作成API"
+      description: "タスクを作成するためのAPIです．"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Request Body"
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: "string"
+                example: "Shopping"
+              description:
+                type: "string"
+                example: "egg milk book"
+              date:
+                type: "string"
+                example: "2021-09-01"
+      responses:
+        200:
+          "description": "A successful response."
+    get:
+      tags:
+        - "task"
+      summary: "タスク取得API"
+      description: "未達成のタスク一覧を取得します"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "成功時のレスポンス"
+          schema:
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+                format: "int64"
+              title:
+                type: "string"
+                example: "Shopping"
+              description:
+                type: "string"
+                example: "egg milk book"
+              date:
+                type: "string"
+                example: "2021-09-01"
+    put:
+      tags:
+        - "task"
+      summary: "タスク達成API"
+      description: "タスクを達成状態にします"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          schema:
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+                format: "int64"
+      responses:
+        200:
+          description: "成功時のレスポンス"

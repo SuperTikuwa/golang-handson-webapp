@@ -7,7 +7,7 @@ MIGRATE_FILES=mysql/migrations
 v=
 
 init:
-	brew install golang-migrate
+	brew install golang-migrate yarn
 	go install github.com/cosmtrek/air@latest&&air -v
 
 go/run:
