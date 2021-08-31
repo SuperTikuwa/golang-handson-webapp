@@ -2,7 +2,7 @@ version: "3"
 services:
   todo_database:
     container_name: todo_database
-    image: mysql
+    image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: my-secret-pw
       MYSQL_DATABASE: todo_db
