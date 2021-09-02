@@ -28,3 +28,37 @@ func InsertNewTask(task model.Task) error {
 
 	return nil
 }
+
+func SelectAllTasks() ([]model.TaskGetResponse, error) {
+	db := gormConnect()
+	defer db.Close()
+
+	var tasks []model.Task
+	if err := db.Where("done=?", false).Find(&tasks).Error; err != nil {
+		return nil, err
+	}
+	log.Println(tasks)
+
+	var responses []model.TaskGetResponse
+	for _, t := range tasks {
+		var r model.TaskGetResponse
+		r.ID = t.ID
+		r.Title = t.Title
+		r.Description = t.Description
+		r.Date = t.Date
+
+		responses = append(responses, r)
+	}
+
+	return responses, nil
+}
+
+func UpdateToDone(taskID int) error {
+	db := gormConnect()
+	defer db.Close()
+
+	if err := db.Model(model.Task{}).Where("id=?", taskID).Update("done", true).Error; err != nil {
+		return err
+	}
+	return nil
+}

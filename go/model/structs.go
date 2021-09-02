@@ -25,3 +25,21 @@ type Task struct {
 	Date        string `gorm:"date"`
 	Done        bool   `gorm:"done"`
 }
+
+// {
+// 	"id": 0,
+// 	"title": "Shopping",
+// 	"description": "egg milk book",
+// 	"date": "2021-09-01"
+// }
+
+type TaskGetResponse struct {
+	ID          int    `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Date        string `json:"date"`
+}
+
+type TaskPutRequest struct {
+	ID int `json:"id"`
+}
